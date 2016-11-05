@@ -1,0 +1,684 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java,开发," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="写在前面工作也有三个多月了，由于种种原因，迟迟没有真正参与到开发中来。一直都是自己在看前人的代码，在自己学习公司所用到的技术、框架、语言等。自己看来终觉浅，心中一直有着被实际开发当头棒喝的准备。终于在十月中旬，老板分配工作下来，让我来负责商品评论的所有相关开发。而今，任务以交付，在等待整合测试。开发的两周内每天睡意昏沉却无法入睡，脑子里总是回想着问题的解决方案。压力陡增。初次开发遇到的困难遍地皆是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一次工作收获总结">
+<meta property="og:url" content="http://yoursite.com/2016/11/05/第一次工作收获总结/index.html">
+<meta property="og:site_name" content="萌萌哒的杰哥的blog">
+<meta property="og:description" content="写在前面工作也有三个多月了，由于种种原因，迟迟没有真正参与到开发中来。一直都是自己在看前人的代码，在自己学习公司所用到的技术、框架、语言等。自己看来终觉浅，心中一直有着被实际开发当头棒喝的准备。终于在十月中旬，老板分配工作下来，让我来负责商品评论的所有相关开发。而今，任务以交付，在等待整合测试。开发的两周内每天睡意昏沉却无法入睡，脑子里总是回想着问题的解决方案。压力陡增。初次开发遇到的困难遍地皆是">
+<meta property="og:updated_time" content="2016-11-05T03:09:09.635Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第一次工作收获总结">
+<meta name="twitter:description" content="写在前面工作也有三个多月了，由于种种原因，迟迟没有真正参与到开发中来。一直都是自己在看前人的代码，在自己学习公司所用到的技术、框架、语言等。自己看来终觉浅，心中一直有着被实际开发当头棒喝的准备。终于在十月中旬，老板分配工作下来，让我来负责商品评论的所有相关开发。而今，任务以交付，在等待整合测试。开发的两周内每天睡意昏沉却无法入睡，脑子里总是回想着问题的解决方案。压力陡增。初次开发遇到的困难遍地皆是">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/05/第一次工作收获总结/"/>
+
+  <title> 第一次工作收获总结 | 萌萌哒的杰哥的blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?02622612538c13be228707dd7e2ec037";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">萌萌哒的杰哥的blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">杰哥帅帅哒</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                第一次工作收获总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-05T10:11:01+08:00" content="2016-11-05">
+              2016-11-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/工作/" itemprop="url" rel="index">
+                    <span itemprop="name">工作</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/05/第一次工作收获总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/05/第一次工作收获总结/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p><strong>工作</strong>也有三个多月了，由于种种原因，迟迟没有真正参与到开发中来。一直都是自己在看前人的代码，在自己学习公司所用到的技术、框架、语言等。自己看来终觉浅，心中一直有着被实际开发当头棒喝的准备。终于在十月中旬，老板分配工作下来，让我来负责商品评论的所有相关开发。而今，任务以交付，在等待整合测试。开发的两周内每天睡意昏沉却无法入睡，脑子里总是回想着问题的解决方案。压力陡增。初次开发遇到的困难遍地皆是，大坑小坑都有，作为一个新人，要在解决的过程中努力汲取经验，争取把底层的小问题一遍过了不再犯，上层的难题记住总结，寻求更优的解决之道。努力的人不一定会成为一个优秀的职员，但一定会是个好职员。在此，记下我的此次开发中的一些经验。</p>
+<h3 id="开始啦"><a href="#开始啦" class="headerlink" title="开始啦"></a>开始啦</h3><ol>
+<li><strong>JS代码出错会导致整个页面加载失败。在实际开发中要善用Chrome的调试工具</strong>。以往只是听人说Chrome和火狐是开发利器，今天才真正开始明白并开始体验它们的便利。可以直接写CSS样式调整；可以利用控制台的报错找到JS出错的位置；也可以打断点调试JS；可以通过Network功能查看发送和返回的数据；有一次发送POST请求，由于AngularJS的$http的POST请求参数是“data”，而我写成了GET请求的“params”导致发送请求总是失败，前前后后弄了六个小时都没找到原因。结果在同事的指导下看了发送请求信息，发现数据是以参数形式接在URL后面的，说明依然是发送的GET请求。找到了问题所在，最后看文档，纠错，成功解决。</li>
+<li><strong>biz层和impl层class记得要注入@service</strong>。在开发中，我往往只注重了控制层的注入参数，而忽略了biz层，特别是最上面的那个Service的注入。在以后的开发中要记得注入biz和impl。</li>
+<li><strong>浏览器显示超大数字超过17位会被js修改更正 ! 需要定义为String</strong>。这里是个深坑，曾经被这里坑了一下午。都不用细说，肯定不会忘，超大的数字要传到浏览器时一定要定义为String ，切记！！！</li>
+<li><strong>引入的JS CSS文件不要放开头, 建议放结尾</strong>。由于浏览器的加载顺序，如果JS放前面会先执行完JS后才开始渲染body，影响体验。所以建议将JS放后面。但CSS放后面可能会造成瞬间空白页或者闪烁感。</li>
+<li><strong>分页里的List查询后直接放入,然后再取出处理后放回. 不能查出后处理再setList放入pageInfo. 例子见杏花楼商品评论加载</strong><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">loadGoodsComment</span><span class="params">(CommentQryCond commentQryCond)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">	PageHelper.startPage(commentQryCond.getPageNum(), commentQryCond.getPageSize());</div><div class="line">	ResultData resultData = ResultData.success();</div><div class="line">	List&lt;GoodsCommentExt&gt; gce = goodsCommentExtMapper.selectByGoodsId(commentQryCond); 						<span class="comment">//该商品所有用户评论</span></div><div class="line">	List&lt;GoodsCommentExt&gt; docom = <span class="keyword">new</span> ArrayList&lt;&gt;(); 									                    <span class="comment">//存放处理后返回的评论数据集合</span></div><div class="line">	List&lt;GoodsCommentExt&gt; reply = goodsCommentExtMapper.queryReplyByGoodsId(commentQryCond.getGoodsId()); 	<span class="comment">//该商品所有管理员回复</span></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; gce.size(); i++) &#123;									<span class="comment">//遍历所有用户评论,对每条评论数据进行处理</span></div><div class="line">		GoodsCommentExt gc = gce.get(i);</div><div class="line">		List&lt;String&gt; con = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;reply.size();j++)&#123;									<span class="comment">//遍历该商品所有管理员回复,将回复内容添加到评论的replys集合中返回到客户端</span></div><div class="line">			<span class="keyword">if</span>(gc.getCommentId()==reply.get(j).getParentCommentId())&#123;</div><div class="line">				con.add(reply.get(j).getContent());</div><div class="line">			&#125;</div><div class="line">			gc.setReplys(con);</div><div class="line">		&#125;</div><div class="line">		String url  = gc.getImgUrls();</div><div class="line">		<span class="keyword">if</span>(StringUtil.isNotEmpty(url))&#123;										<span class="comment">//所有操作前先进行非空判断</span></div><div class="line">			List&lt;String&gt; imgUrlss =Arrays.asList(url.split(<span class="string">","</span>)); 			<span class="comment">//数据库中url为","分开的字符串.将其切割并转为List返回</span></div><div class="line">			gc.setImgUrlss(imgUrlss);										<span class="comment">//返回的评论图片url集合</span></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(StringUtil.isEmpty(gc.getIconUrl()))&#123;</div><div class="line">			                                                <span class="comment">//如果用户没有头像,则使用默认的头像显示.</span></div><div class="line">			gc.setIconUrl(<span class="string">"http://7xu5w3.com1.z0.glb.clouddn.com/20160617030903657.jpg"</span>);        <span class="comment">//本要写成常量,但无法注入,以后可根据需要修改.或使用本地图片资源</span></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (gc.getAnonymityFlag().equals(<span class="string">"1"</span>)) &#123;												<span class="comment">//处理匿名用户账户名</span></div><div class="line">			gc.setAccountName(<span class="string">"匿名用户"</span>);										<span class="comment">//匿名评论直接把账户名设置为"匿名用户"返回.		</span></div><div class="line">			gc.setIconUrl(<span class="string">"http://7xu5w3.com1.z0.glb.clouddn.com/20160617030903657.jpg"</span>); <span class="comment">//匿名评论的用户头像也设置为默认头像显示.</span></div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			String accountName = gc.getAccountName();						<span class="comment">//非匿名账户只显示第一个和最后一个字符.</span></div><div class="line">			</div><div class="line">			<span class="keyword">if</span>(!StringUtil.isEmpty(accountName)&amp;&amp; !(<span class="string">""</span>.equals(accountName)))&#123;</div><div class="line">				gc.setAccountName(accountName.charAt(<span class="number">0</span>) + <span class="string">"****"</span> + accountName.charAt(accountName.length() - <span class="number">1</span>));</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		docom.add(gc);</div><div class="line">	&#125;</div><div class="line">	PageInfo&lt;GoodsCommentExt&gt; pageInfo = <span class="keyword">new</span> PageInfo&lt;GoodsCommentExt&gt;(gce);<span class="comment">// 分页里的list查询后直接放入,然后再取出处理后放回.</span></div><div class="line">	System.out.println(pageInfo.getPageSize());</div><div class="line">	pageInfo.setList(docom);											<span class="comment">//存入处理好后的评论list集合返回到客户端</span></div><div class="line">	resultData.put(<span class="string">"pageInfo"</span>, pageInfo);</div><div class="line">	<span class="comment">//之前是将所有回复和评论返回到客户端由js操作分组,现改为后台操作.</span></div><div class="line">	<span class="comment">//resultData.put("reply", reply);				</span></div><div class="line"></div><div class="line">	<span class="keyword">return</span> resultData;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+            <a href="/tags/开发/" rel="tag">#开发</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/14/偶然相聚/" rel="next" title="偶然相聚">
+                <i class="fa fa-chevron-left"></i> 偶然相聚
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/11/05/第一次工作收获总结/"
+     data-title="第一次工作收获总结"
+     data-content=""
+     data-url="http://yoursite.com/2016/11/05/第一次工作收获总结/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/05/第一次工作收获总结/"
+           data-title="第一次工作收获总结" data-url="http://yoursite.com/2016/11/05/第一次工作收获总结/">
+      </div>
+    
+  </div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"jaytangchn"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oco7xxhia.bkt.clouddn.com/image/avatar/gakky.jpg"
+               alt="汤杰" />
+          <p class="site-author-name" itemprop="name">汤杰</p>
+          <p class="site-description motion-element" itemprop="description">人生天地间，忽如远行客。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始啦"><span class="nav-number">2.</span> <span class="nav-text">开始啦</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">汤杰</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jaytangchn"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
